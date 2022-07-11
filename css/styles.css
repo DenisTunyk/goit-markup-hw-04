@@ -1,0 +1,383 @@
+/* 
+bg-color-primary #2196F3 - голубой цвет фона
+bg-color-secondary #F5F4FA  - серый цвет фона
+text-color-primary #757575  - основной цвет фона
+text-color-secondary #212121 - название кнопок и заголовков
+text-color-activ #2196F3 - активный текст
+ */
+
+/* Стили ко всему документу */
+:root {
+  --bg-color-primary: #2196f3;
+  --bg-color-secondary: #f5f4fa;
+  --text-color-btn-primary: #ffffff;
+  --text-color-btn-secondary: #212121;
+  --text-color-primary: #757575;
+  --text-color-secondary: #212121;
+  --text-color-active: #2196f3;
+  --black-color: #212121;
+  --white-color: #ffffff;
+  --border-color: #EEEEEE;
+  --boreder-header-color: #ECECEC;
+  --baner-color: #2f303a;
+  
+
+  /* Flex margin */
+  --set-margin: 30px;
+  
+}
+
+/* Загальні стилі для всього документа */
+html{
+  box-sizing: border-box;
+}
+body{
+  color: var(--text-color-primary);
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.71;
+}
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0px;
+  padding: 0px;
+}
+.container{
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.list{
+  list-style-type: none;
+}
+.link{
+  text-decoration: none;
+  color: currentColor;
+}
+.section{
+  padding: 94px 0px;
+}
+
+.section-title{
+  margin-top: 0px;
+  margin-bottom: 50px;
+  color: var(--text-color-secondary);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* Flex start */
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--set-margin));
+  margin-top: calc(-1 * var(--set-margin));
+}
+
+.card-item {
+  /* width: 270px; */
+  margin-left: var(--set-margin);
+  margin-top: var(--set-margin);
+}
+/* Flex end */
+
+
+/* END Загальні стилі для всього документа */
+
+/* Стилі для логотипа */
+.logo{
+  color: var(--text-color-active);
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+.logo-black{
+  color: var(--black-color);
+}
+/* END Стилі для логотипа*/
+
+
+
+/* Стилі nav */
+.header{
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  border-bottom: solid 1px var(--boreder-header-color);
+}
+.main-nav{
+  display: flex;
+  align-items: center;
+}
+.site-nav{
+  display:flex;
+  margin-left: 93px;
+}
+.site-nav .item + .item{
+  margin-left: 50px;
+}
+
+.site-nav .link{
+  display: block;
+  color: var(--text-color-secondary);
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--text-color-active);
+}
+.site-nav .link.active {
+  color: var(--text-color-active);
+}
+.site-contact{
+  display: flex;
+  margin-left: auto;
+}
+.site-contact .item + .item {
+  margin-left: 50px;
+}
+.site-contact .link{
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.site-contact .link:hover,
+.site-contact .link:focus {
+  color: var(--text-color-active);
+}
+/* END Стилі nav  */
+
+/* Section baner */
+.banner{
+  padding: 200px 0px;
+  background-color: var(--baner-color);
+  text-align: center;
+}
+.banner .title {
+  margin: 0 auto;
+  max-width: 696px;
+  margin-bottom: 40px;
+  color: var(--white-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  
+}
+
+.banner .btn {
+  padding: 10px 32px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  font-family: inherit;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-btn-primary);
+}
+/* END section baner */
+
+/* Section about */
+.site-about{
+  padding-bottom: 0px;
+}
+.site-about-item{
+  flex-basis: calc(100% / 4 - var(--set-margin));
+}
+
+/* .site-about-flex>.item:nth-of-type(4n){
+  margin-right: 0px;
+} */
+
+.site-about .section-subtitle {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: var(--text-color-secondary);
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+.site-about .text {
+  margin: 0px;
+}
+/* Section about END */
+
+/* Section site-work */
+.site-work .image{
+  display: block;
+}
+
+.site-work-item{
+  flex-basis: calc(100% / 3 - var(--set-margin));
+}
+/* Section site-work END*/
+
+/* Section our comand */
+.site-command {
+  background-color: var(--bg-color-secondary);
+  text-align: center;
+}
+.site-command .image{
+  display: block;
+}
+.site-command .text-block{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.site-command-item{
+  flex-basis: calc(100% / 4 - var(--set-margin));
+}
+
+.site-command .comand-name{
+  color: var(--text-color-btn-secondary);
+  font-weight: 500;
+  line-height: 1.18;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.site-command .text{
+  font-size: 16px;
+  line-height: 1.19;
+}
+
+
+/* =====================PORTFOLIO====================== */
+/* Button */
+.filter-menu {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+.filter-menu .item + .item{
+  margin-left: 8px;
+}
+.filter-button-prm {
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-btn-primary);
+}
+
+.filter-button-sec{
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  text-align: center;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: var(--bg-color-secondary);
+  color: var(--text-color-btn-secondary);
+}
+
+.filter-button-sec:hover,
+.filter-button-sec:focus {
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-btn-primary);
+}
+
+/* Section project on PORTFOLIO */
+
+.allwork-item{
+  flex-basis: calc(100% / 3 - var(--set-margin));
+}
+
+.flex-container .image{
+  display: block;
+}
+
+.site-project{
+  padding: 20px 24px;
+  border-left: solid 1px var(--border-color);
+  border-right: solid 1px var(--border-color);
+  border-bottom: solid 1px var(--border-color);
+}
+
+.site-project-title {
+  margin-bottom: 4px;
+  color: var(--text-color-secondary);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.site-project-text {
+  font-size: 16px;
+  line-height: 1.88;
+}
+
+/* footer */
+.site-footer {
+  padding: 60px 0px;
+  background-color: var(--baner-color);
+}
+.site-footer .logo{
+  margin-bottom: 20px;
+  display: block;
+}
+
+.logo-white {
+  color: var(--white-color);
+}
+
+.footer-contact{
+  font-style: inherit;
+}
+.footer-contact .item{
+  margin-bottom: 9px;
+}
+.footer-contact .item:last-child {
+  margin-bottom: 0px;
+}
+
+.footer-contact-link {
+  color: rgb(255, 255, 255, 0.6);
+  font-style: normal;
+}
+
+.footer-contact-link:hover, .footer-contact-link:focus{
+  color: #ffffff;
+}
+
+
+
