@@ -20,6 +20,7 @@ text-color-activ #2196F3 - активный текст
   --border-color: #EEEEEE;
   --boreder-header-color: #ECECEC;
   --baner-color: #2f303a;
+
   
 
   /* Flex margin */
@@ -157,22 +158,65 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .site-contact .item + .item {
   margin-left: 50px;
 }
-.site-contact .link{
+/* .site-contact .link{
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+} */
+
+.site-contact .link{
+  display: inline-flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
+
 .site-contact .link:hover,
 .site-contact .link:focus {
   color: var(--text-color-active);
+}
+.site-contact .link::before{
+  content: "";
+  margin-right: 10px;
+}
+.site-contact .envelope::before{
+    width: 16px;
+    height: 12px;
+    background-image: url(../images/header/envelope.svg);
+}
+.site-contact .envelope:hover::before,
+.site-contact .envelope:focus::before {
+  background-image: url(../images/header/envelope-blue.svg);
+}
+.site-contact .phone::before {
+  width: 10px;
+  height: 16px;
+  background-image: url(../images/header/smartphone.svg);
+}
+.site-contact .phone:hover::before,
+.site-contact .phone:focus::before {
+  background-image: url(../images/header/smartphone-blue.svg);
 }
 /* END Стилі nav  */
 
 /* Section baner */
 .banner{
+  max-width: 1600px;
+  max-height: 600px;
   padding: 200px 0px;
-  background-color: var(--baner-color);
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--baner-color);
+  background-image: linear-gradient(
+  to right,
+  rgba(47, 48, 58, 0.4),
+  rgba(47, 48, 58, 0.4)
+),
+  url(../images/baner/baner.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .banner .title {
   margin: 0 auto;
@@ -199,6 +243,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
   letter-spacing: 0.06em;
   background-color: var(--bg-color-primary);
   color: var(--text-color-btn-primary);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* END section baner */
 
@@ -208,6 +253,28 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 .site-about-item{
   flex-basis: calc(100% / 4 - var(--set-margin));
+}
+.site-about-item::before{
+  display: block;
+  content: "";
+  width: 100%;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: var(--bg-color-secondary);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.site-about-item.img-ant::before{
+  background-image: url(../images/about/antenna.svg);
+}
+.site-about-item.img-clc::before {
+  background-image: url(../images/about/clock.svg);
+}
+.site-about-item.img-diagr::before {
+  background-image: url(../images/about/diagram.svg);
+}
+.site-about-item.img-astr::before {
+  background-image: url(../images/about/astronaut.svg);
 }
 
 /* .site-about-flex>.item:nth-of-type(4n){
@@ -285,6 +352,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
   padding: 6px 22px;
   border: none;
   border-radius: 4px;
+  
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -293,6 +361,7 @@ h1, h2, h3, h4, h5, h6, p, ul {
   cursor: pointer;
   background-color: var(--bg-color-primary);
   color: var(--text-color-btn-primary);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter-button-sec{
