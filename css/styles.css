@@ -175,7 +175,16 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .site-contact .link:focus {
   color: var(--text-color-active);
 }
-.site-contact .link::before{
+.site-contact .svg-img{
+  margin-right: 10px;
+  fill: var(--text-color-primary);
+}
+.site-contact .link:hover .svg-img,
+.site-contact .link:focus .svg-img{
+  fill: var(--text-color-active);
+}
+
+/* .site-contact .link::before{
   content: "";
   margin-right: 10px;
 }
@@ -196,14 +205,14 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .site-contact .phone:hover::before,
 .site-contact .phone:focus::before {
   background-image: url(../images/header/smartphone-blue.svg);
-}
+} */
 /* END Стилі nav  */
 
 /* Section baner */
 .banner{
   max-width: 1600px;
   max-height: 600px;
-  padding: 200px 0px;
+  /* padding: 200px 0px; */
   text-align: center;
   margin-left: auto;
   margin-right: auto;
@@ -254,7 +263,18 @@ h1, h2, h3, h4, h5, h6, p, ul {
 .site-about-item{
   flex-basis: calc(100% / 4 - var(--set-margin));
 }
-.site-about-item::before{
+.site-about-item-svg{
+  width: 100%;
+  padding-top:25px;
+  padding-bottom: 25px;
+  background-color: var(--bg-color-secondary);
+}
+.site-about-item-svg .svg-img{
+  display: block;
+  margin: 0 auto;
+}
+
+/* .site-about-item::before{
   display: block;
   content: "";
   width: 100%;
@@ -275,14 +295,14 @@ h1, h2, h3, h4, h5, h6, p, ul {
 }
 .site-about-item.img-astr::before {
   background-image: url(../images/about/astronaut.svg);
-}
+} */
 
 /* .site-about-flex>.item:nth-of-type(4n){
   margin-right: 0px;
 } */
 
 .site-about .section-subtitle {
-  margin-top: 0px;
+  margin-top: 30px;
   margin-bottom: 10px;
   font-size: 14px;
   color: var(--text-color-secondary);
